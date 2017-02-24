@@ -24,6 +24,7 @@ void main() {
 		double length;
 		double width;
 		double weight;
+		Scissors * nextPair;
 		void init(int i) {
 			Color = "Blue & Silver";
 			if (i == 0)
@@ -62,6 +63,11 @@ void main() {
 	Second.setAll(17.2, 1.5, 31.4);
 	Third.init(0);
 	Third.setAll(8.9, 1.1, 15.8);
+	First.nextPair = &Second;
+	First.nextPair->nextPair = &Third; /// This is the way to 
+	/// access the value of the other struct inside
+	/// the parent Struct... 
+	///     -> (operator) instead of . (operator)
 
 	cout << First.Metal << " : " << Second.Metal << " : " << Third.Metal << endl;
 	Scissors arrayCut[49];
