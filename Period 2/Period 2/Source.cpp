@@ -46,6 +46,14 @@ void main() {
 		Comfort rating;
 
 	};
+	struct Rectangle {
+		int length;
+		int width;
+		int x, y; // TopLeft 
+		void draw() {
+			//rectangle(y, x, y + width, x + length);
+		}
+	};
 	struct Chair {
 		int numberLeg;
 		double height;
@@ -57,7 +65,7 @@ void main() {
 		double weight;
 		Comfort Rating;
 
-	}tallGenericChair;
+	}tallGenericChair, anotherChair;
 
 	tallGenericChair.Rating.init(4, 9);
 	cout << tallGenericChair.Rating.rate() << endl;
